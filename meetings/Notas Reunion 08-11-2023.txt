@@ -1,0 +1,3 @@
+construir la estructura de datos (reglas) que sirva de insumo con:
+1. Patrones linguisticos, construir gramatica
+2. Ontologías

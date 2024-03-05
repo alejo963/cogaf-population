@@ -1,0 +1,852 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf/"
+     xml:base="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:modelo_cogaf="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#assessedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#assessedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#characterizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#characterizedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#comprises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#comprises">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#detectedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#detectedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RecognitionMethod"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#generates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#generates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasParameters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasParameters">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasState -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasState">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#State"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#linkedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#linkedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#measuredWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#measuredWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#presentIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#presentIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#trainedThrough -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#trainedThrough">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#abbreviation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#abbreviation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ageRank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ageRank">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#applicationType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#applicationType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>GROUPAL</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>INDIVIDUAL</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#arousal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#arousal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#author -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#author">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#basicCogFunctionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#basicCogFunctionType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ATTENTION</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>MEMORY</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>PERCEPTION</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#basicEmotionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#basicEmotionType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ANGER</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>DISGUST</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>FEAR</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>HAPPINESS</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>SADNESS</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>SURPRISE</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#behaviourDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#behaviourDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#cognitiveTestDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#cognitiveTestDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#complexCogFunctionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#complexCogFunctionType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>COGNITIVE FLEXIBILITY</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>INHIBITORY CONTROL</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>LANGUAGE</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>PRAXIA</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>WORKING MEMORY</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#eventDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#eventDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Event"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#measure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#measure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#rank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#rank">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#secondaryEmotionType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#secondaryEmotionType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ASTONISHMENT</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>EMPATHY</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>NOSTALGIA</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>SHOCK</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>TENDERNESS</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#testType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#testType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ORAL</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>WRITTEN</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#valence -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#valence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#State"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#values -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#values">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#basicCogFunctionType"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:oneOf>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>ATTENTION</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>MEMORY</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>PERCEPTION</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </owl:oneOf>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#basicEmotionType"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:oneOf>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>ANGER</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>DISGUST</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>FEAR</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>HAPPINESS</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>SADNESS</rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first>SURPRISE</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </owl:oneOf>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#complexCogFunctionType"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:oneOf>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>COGNITIVE FLEXIBILITY</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>INHIBITORY CONTROL</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>LANGUAGE</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>PRAXIA</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>WORKING MEMORY</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </owl:oneOf>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#GroupalTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#GroupalTest">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#applicationType"/>
+                        <owl:hasValue>GROUPAL</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IndividualTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IndividualTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IndividualTest">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#applicationType"/>
+                        <owl:hasValue>INDIVIDUAL</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#OralTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#OralTest">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#testType"/>
+                        <owl:hasValue>ORAL</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WrittenTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RecognitionMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RecognitionMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#secondaryEmotionType"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:oneOf>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>ASTONISHMENT</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>EMPATHY</rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first>NOSTALGIA</rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first>SHOCK</rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first>TENDERNESS</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </owl:oneOf>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#State -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#State"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WrittenTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WrittenTest">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#testType"/>
+                        <owl:hasValue>WRITTEN</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
