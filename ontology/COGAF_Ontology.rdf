@@ -599,7 +599,9 @@
 
     <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:Class>
     
 
 
@@ -844,6 +846,105 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Attention -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Attention">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFlexibility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFlexibility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#HighLevel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#HighLevel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#InhibitoryControl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#InhibitoryControl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Language -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Language">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#LowLevel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#LowLevel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#MediumLevel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#MediumLevel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Memory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Memory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Perception -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Perception">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Praxia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Praxia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WorkingMemory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WorkingMemory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:NamedIndividual>
 </rdf:RDF>
 
 
