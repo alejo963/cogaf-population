@@ -860,10 +860,20 @@
     
 
 
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Anger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Anger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Attention -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Attention">
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
     </owl:NamedIndividual>
     
 
@@ -871,7 +881,44 @@
     <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFlexibility -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFlexibility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Disgust -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Disgust">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Fear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Fear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Guiltiness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Guiltiness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Happiness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Happiness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
     </owl:NamedIndividual>
     
 
@@ -887,6 +934,7 @@
     <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#InhibitoryControl -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#InhibitoryControl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
     </owl:NamedIndividual>
     
@@ -895,6 +943,7 @@
     <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Language -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Language">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
     </owl:NamedIndividual>
     
@@ -920,6 +969,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Memory">
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
     </owl:NamedIndividual>
     
 
@@ -928,6 +978,16 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Perception">
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Pleasure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Pleasure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion"/>
     </owl:NamedIndividual>
     
 
@@ -935,7 +995,53 @@
     <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Praxia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Praxia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Pride -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Pride">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Sadness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Sadness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Satisfaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Satisfaction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Shame -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Shame">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#SecondaryEmotion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Surprise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Surprise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicEmotion"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
     </owl:NamedIndividual>
     
 
@@ -943,6 +1049,7 @@
     <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WorkingMemory -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WorkingMemory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
     </owl:NamedIndividual>
 </rdf:RDF>
