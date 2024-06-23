@@ -247,9 +247,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isComplexFunction -->
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicFunction -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isComplexFunction">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicFunction">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </owl:DatatypeProperty>
@@ -336,8 +336,8 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isComplexFunction"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicFunction"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -414,8 +414,8 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isComplexFunction"/>
-                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicFunction"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -614,7 +614,7 @@
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Bomb"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Jackpot"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Killer"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBasicFunction>
     </owl:NamedIndividual>
     
 
@@ -644,7 +644,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Adventure"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Puzzle"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
     </owl:NamedIndividual>
     
 
@@ -821,7 +821,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IgnoreDistractions">
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
         <measuredWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#StroopTest"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
     </owl:NamedIndividual>
     
 
@@ -833,7 +833,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Bomb"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Roulette"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
     </owl:NamedIndividual>
     
 
@@ -876,7 +876,7 @@
         <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Comunicate"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Hangman"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Karaoke"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
     </owl:NamedIndividual>
     
 
@@ -937,7 +937,7 @@
         <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Remember"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mine"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Solitary"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBasicFunction>
     </owl:NamedIndividual>
     
 
@@ -969,7 +969,7 @@
         <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ProcessVisualInfo"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Driver"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Wave"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBasicFunction>
     </owl:NamedIndividual>
     
 
@@ -990,7 +990,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
         <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Karaoke"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
     </owl:NamedIndividual>
     
 
@@ -1262,7 +1262,7 @@
         <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComprehendEmotions"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Hangman"/>
         <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Quiz"/>
-        <isComplexFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isComplexFunction>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
     </owl:NamedIndividual>
     
 
