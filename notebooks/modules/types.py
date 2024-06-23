@@ -4,9 +4,9 @@ onto = get_ontology('./../ontology/COGAF_Ontology.rdf').load()
 
 
 class CogafInstance():
-    def __init__(self, cognitive_function: str, emotion: str) -> None:
+    def __init__(self, cognitiveFunction: str, emotion: str) -> None:
 
-        self.cognitiveFunction = CognitiveFunction(cognitive_function)
+        self.cognitiveFunction = CognitiveFunction(cognitiveFunction)
 
         self.emotion = Emotion(emotion)
 
@@ -20,6 +20,9 @@ class CogafInstance():
 class CognitiveFunction():
     def __init__(self, name) -> None:
         self.name = name
+        if onto[name] is None:
+            raise NotImplementedError("Cognitive Function not defined in ontology")
+        self.isBasicFunction = onto[name].isBasicFunction[0]
         self.activities = []
         for activity in onto[name].trainedThrough:
             self.activities.append(ComplementaryActivity(activity.name))
@@ -31,6 +34,7 @@ class CognitiveFunction():
     def toDict(self) -> dict:
         return {
             "name": self.name,
+            "isBasicFunction": self.isBasicFunction,
             "activities": [act.toDict() for act in self.activities],
             "tasks": [task.toDict() for task in self.tasks],
         }
@@ -90,11 +94,13 @@ class CognitiveTest():
 class Emotion():
     def __init__(self, name) -> None:
         self.name = name
+        self.isBasicEmotion = onto[name].isBasicEmotion[0]
         self.state = State(onto[name].hasState)
 
     def toDict(self) -> dict:
         return {
             "name": self.name,
+            "isBasicEmotion": self.isBasicEmotion,
             "state": self.state.toDict()
         }
 
