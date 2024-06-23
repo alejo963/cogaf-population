@@ -1,4 +1,4 @@
-from owlready2 import *
+from owlready2 import get_ontology
 
 onto = get_ontology('./../ontology/COGAF_Ontology.rdf').load()
 
