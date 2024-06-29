@@ -1,3 +1,7 @@
+"""
+Classes to infer ontology instances from a cognitive function and emotion
+"""
+
 from owlready2 import get_ontology
 
 onto = get_ontology('./../ontology/COGAF_Ontology.rdf').load()
