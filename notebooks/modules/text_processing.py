@@ -1,6 +1,7 @@
 """Functions to load and process text"""
-
+import re
 import glob
+from unidecode import unidecode
 import pandas as pd
 import spacy
 
@@ -40,14 +41,15 @@ def clean_text(docs):
 
     for text in docs:
 
-        text = text.replace("\n", " ")
+        text = re.sub(r'\n\s*\n+', "\n", text)
+        text = re.sub(r'\s\s*', " ", text)
 
         # Process the text using spaCy
         doc = nlp(text)
 
-        # Remove stopwords, punctuation and whitespaces
+        # Remove stopwords, punctuation and whitespaces and normalize special characters
         filtered_words = [
-            token.lemma_ for token in doc if not token.is_punct and not token.is_stop and not token.text == " "]
+            unidecode(token.lemma_) for token in doc if not token.is_punct and not token.is_stop and not token.text == " "]
 
         clean_text = ' '.join(filtered_words)
         clean_docs.append(clean_text)
