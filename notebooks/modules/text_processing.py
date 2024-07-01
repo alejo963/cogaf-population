@@ -3,7 +3,6 @@
 import glob
 import pandas as pd
 import spacy
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 nlp = spacy.load("es_core_news_sm")
 
