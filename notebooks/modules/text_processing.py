@@ -1,3 +1,5 @@
+"""Functions to load and process text"""
+
 import glob
 import pandas as pd
 import spacy
@@ -7,6 +9,7 @@ nlp = spacy.load("es_core_news_sm")
 
 
 def load_text_files(dir_path: str, limit: int = None):
+    """Load text files into a dictionary with the file names as keys and their content as values"""
     text_files = glob.glob(dir_path + '*.txt')
 
     texts = {}
@@ -22,6 +25,7 @@ def load_text_files(dir_path: str, limit: int = None):
 
 
 def get_text_dataframe(dir_path: str, text_labels_excel: str, limit: int = None):
+    """Load texts and their respective labels into a pandas dataframe"""
     df = pd.read_excel(text_labels_excel, sheet_name=0)
 
     texts = load_text_files(dir_path, limit)
@@ -31,22 +35,8 @@ def get_text_dataframe(dir_path: str, text_labels_excel: str, limit: int = None)
     return df
 
 
-def remove_stopwords(documents):
-    clean_docs = []
-
-    for text in documents:
-        # Process the text using spaCy
-        doc = nlp(text)
-
-        # Remove stopwords
-        filtered_words = [token.text for token in doc if not token.is_stop]
-
-        # Join the filtered words to form a clean text
-        clean_text = ''.join(filtered_words)
-        clean_docs.append(clean_text)
-
-
 def clean_text(docs):
+    """Removes stop words, punctuation and whitespace tokens and applies lemmatization """
     clean_docs = []
 
     for text in docs:
@@ -64,11 +54,3 @@ def clean_text(docs):
         clean_docs.append(clean_text)
 
     return clean_docs
-
-
-def remove_punctuation(documents):
-    result = []
-    for text in documents:
-        result.append(''.join(filter(str.isalnum, text)))
-
-    return result
