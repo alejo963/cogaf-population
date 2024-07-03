@@ -16,7 +16,7 @@ def load_text_files(dir_path: str, limit: int = None):
     for text_file in text_files:
         with open(text_file, "r") as f:
             texts.update({text_file[len(dir_path):]
-                         : "".join(f.readlines()).lower()})
+                         : "".join(f.readlines())})
 
     if limit:
         return texts[:limit]
@@ -41,6 +41,8 @@ def clean_text(docs):
 
     for text in docs:
 
+        text = text.lower()
+
         text = re.sub(r'\n\s*\n+', "\n", text)
         text = re.sub(r'\s\s*', " ", text)
 
@@ -55,3 +57,6 @@ def clean_text(docs):
         clean_docs.append(clean_text)
 
     return clean_docs
+
+def to_array(X):
+    return X.toarray()
