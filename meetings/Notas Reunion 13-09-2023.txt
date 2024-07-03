@@ -1,6 +1,0 @@
-Web Scraping
-
-Primer objetivo: Identificar fuentes relacionadas a situaciones que se puedan modelar dentro del ambito de los juegos serios en los que se puedan entrenar las capacidades cognitivas y emocionales. Identificar de la fuente que es de interes
-
-Segundo Objetivo: Que tecnicas usar
-
