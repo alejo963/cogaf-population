@@ -2,6 +2,17 @@ import torch
 from torch import nn, Tensor
 
 
+COGN_FUNC = ["Attention",
+             "Memory",
+             "Percpetion",
+             "CognitiveFlexibility",
+             "InhibitoryControl",
+             "Language",
+             "Praxia",
+             "WorkingMemory",
+             ]
+
+
 def train_step(model: nn.Module, X_train: Tensor, y_train: Tensor, loss_fn: nn.Module, optimizer):
 
     model.train()
@@ -37,7 +48,7 @@ def train(model: nn.Module,
           epochs: int,
           lr: float,
           device: torch.device = "cpu"):
-    
+
     optimizer = optimizer_class(model.parameters(), lr)
 
     model.to(device)
