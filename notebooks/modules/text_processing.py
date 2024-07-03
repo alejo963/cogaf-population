@@ -15,8 +15,7 @@ def load_text_files(dir_path: str, limit: int = None):
     texts = {}
     for text_file in text_files:
         with open(text_file, "r") as f:
-            texts.update({text_file[len(dir_path):]
-                         : "".join(f.readlines())})
+            texts.update({text_file[len(dir_path):]: "".join(f.readlines())})
 
     if limit:
         return texts[:limit]
@@ -57,6 +56,21 @@ def clean_text(docs):
         clean_docs.append(clean_text)
 
     return clean_docs
+
+
+def get_most_important_words(feature_names, tfidf_scores, doc_names, n = 30):
+    important_words_per_doc = []
+    for i, score in enumerate(tfidf_scores):
+        # Sort words by TF-IDF scores and select the top n
+        important_words = [word for word, score in
+                           sorted(zip(feature_names, score), key=lambda x: x[1], reverse=True)[:n]]
+        important_words_str = ", ".join(important_words)
+        doc_name = doc_names[i]
+        important_words_per_doc.append(
+            {"doc": doc_name, "words": important_words_str})
+        
+    return important_words_per_doc
+
 
 def to_array(X):
     return X.toarray()
