@@ -25,10 +25,10 @@ def get_senticnet_response(text: str):
         "content": response.content.decode()
     }
     if result["status_code"] == 200:
-        introspection_value = get_dimension_value(result["content"], 2)
-        temper_value = get_dimension_value(result["content"], 3)
-        attitude_value = get_dimension_value(result["content"], 4)
-        sensitivity_value = get_dimension_value(result["content"], 5)
+        introspection_value = get_dimension_value(result["content"], -4)
+        temper_value = get_dimension_value(result["content"], -3)
+        attitude_value = get_dimension_value(result["content"], -2)
+        sensitivity_value = get_dimension_value(result["content"], -1)
         result.update({
             "introspection": {
                 "value": introspection_value,

@@ -64,7 +64,7 @@ def get_most_important_words(feature_names, tfidf_scores, doc_names, n = 30):
         # Sort words by TF-IDF scores and select the top n
         important_words = [word for word, score in
                            sorted(zip(feature_names, score), key=lambda x: x[1], reverse=True)[:n]]
-        important_words_str = ", ".join(important_words)
+        important_words_str = " ".join(important_words)
         doc_name = doc_names[i]
         important_words_per_doc.append(
             {"doc": doc_name, "words": important_words_str})
