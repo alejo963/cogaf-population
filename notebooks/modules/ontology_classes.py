@@ -42,6 +42,10 @@ class CognitiveFunction():
         for task in onto[name].assessedWith:
             self.tasks.append(PsychologicalTask(task.name))
 
+        self.capabilites = []
+        for capability in onto[name].generates:
+            self.capabilites.append(capability.name)
+
 
 class ComplementaryActivity():
     def __init__(self, name) -> None:
@@ -82,8 +86,22 @@ class Emotion():
         self.isBasicEmotion = onto[name].isBasicEmotion[0]
         self.state = State(onto[name].hasState)
 
+        self.characteristics = []
+        for chara in onto[name].characterizedBy:
+            self.characteristics.append(Characteristic(chara.name))
+
 
 class State():
     def __init__(self, state) -> None:
         self.valence = state.valence
         self.arousal = state.arousal
+
+
+class Characteristic():
+    def __init__(self, name) -> None:
+        self.name = name
+        self.parameters = []
+        for param in onto[name].generates:
+            self.parameters.append(param.name)
+
+        self.recognitionMethod = onto[name].recognizedWith[0].name

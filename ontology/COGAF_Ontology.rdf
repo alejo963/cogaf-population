@@ -51,8 +51,9 @@
     <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#detectedWith -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#detectedWith">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RecognitionMethod"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RecognitionMethod"/>
     </owl:ObjectProperty>
     
 
