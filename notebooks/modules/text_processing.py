@@ -4,6 +4,8 @@ import glob
 from unidecode import unidecode
 import pandas as pd
 import spacy
+from spacy.language import Language
+from spacy.matcher import Matcher
 
 nlp = spacy.load("es_core_news_sm")
 
@@ -40,10 +42,7 @@ def clean_text(docs):
 
     for text in docs:
 
-        text = text.lower()
-
-        text = re.sub(r'\n\s*\n+', "\n", text)
-        text = re.sub(r'\s\s*', " ", text)
+        text = normalize(text)
 
         # Process the text using spaCy
         doc = nlp(text)
@@ -58,7 +57,14 @@ def clean_text(docs):
     return clean_docs
 
 
-def get_most_important_words(feature_names, tfidf_scores, doc_names, n = 30):
+def normalize(text: str, decode: bool = False, lower_case: bool = True):
+    txt = text.lower() if lower_case else text
+    txt = re.sub(r'\n\s*\n+', "\n", txt)
+    txt = re.sub(r'\s\s*', " ", txt)
+    return unidecode(txt) if decode else txt
+
+
+def get_most_important_words(feature_names, tfidf_scores, doc_names, n=30):
     important_words_per_doc = []
     for i, score in enumerate(tfidf_scores):
         # Sort words by TF-IDF scores and select the top n
@@ -68,9 +74,47 @@ def get_most_important_words(feature_names, tfidf_scores, doc_names, n = 30):
         doc_name = doc_names[i]
         important_words_per_doc.append(
             {"doc": doc_name, "words": important_words_str})
-        
+
     return important_words_per_doc
 
 
 def to_array(X):
     return X.toarray()
+
+
+
+
+def get_event(text: str, verbose: bool = False) -> str:
+    matcher = Matcher(nlp.vocab)
+
+    section_title = [{"IS_PUNCT": True},
+                        {"LOWER": {"FUZZY": "qué"}},
+                        {"LOWER": {"FUZZY": "pasó"}},
+                        {"IS_PUNCT": True}]
+
+    pattern = [
+        [
+            *section_title,
+            {"OP": r"{1,}"}, {"TEXT": "."},
+            {"LOWER": {"REGEX": {"IN": ["consecuencias*"]}}}
+        ]
+    ]
+
+    matcher.add("Event", pattern)
+
+    doc = nlp(text)
+
+    matches = matcher(doc)
+    if verbose:
+        for match_id, start, end in matches:
+            # Get string representation
+            string_id = nlp.vocab.strings[match_id]
+            span = doc[start:end-1]  # The matched span
+            print("String id", string_id)
+            print(f"Start: {start} - End: {end}")
+            print("Text:")
+            print(span.text)
+            print("-----------------------------------")
+
+    start, end = matches[0][1:]
+    return doc[start:end-1].text
