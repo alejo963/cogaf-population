@@ -1,0 +1,1060 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#"
+     xml:base="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#assessedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#assessedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#characterizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#characterizedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#comprises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#comprises">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#detectedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#detectedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RecognitionMethod"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#generates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#generates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasParameters -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#hasParameters">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#linkedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#linkedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#measuredWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#measuredWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#presentIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#presentIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#produces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#produces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Event"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#trainedThrough -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#trainedThrough">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#abbreviation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#abbreviation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ageRank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ageRank">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#applicationType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#applicationType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>GROUPAL</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>INDIVIDUAL</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#attitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#attitude">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#author -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#author">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#behaviourDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#behaviourDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#cognitiveTestDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#cognitiveTestDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#eventDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#eventDescription">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#introspection -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#introspection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicEmotion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicEmotion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicFunction -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicFunction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#measure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#measure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#rank -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#rank">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#sensitivity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#sensitivity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#temper -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#temper">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#testType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#testType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>ORAL</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>WRITTEN</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#values -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#values">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicFunction"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Behaviour"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Characteristic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#isBasicFunction"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Emotion"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#GroupalTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#GroupalTest">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#applicationType"/>
+                        <owl:hasValue>GROUPAL</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IndividualTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IndividualTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IndividualTest">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#applicationType"/>
+                        <owl:hasValue>INDIVIDUAL</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#OralTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#OralTest">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#testType"/>
+                        <owl:hasValue>ORAL</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WrittenTest"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Parameter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Parameter"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RecognitionMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RecognitionMethod"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WrittenTest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WrittenTest">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#testType"/>
+                        <owl:hasValue>WRITTEN</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Adventure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Adventure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Match"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Write"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Attention -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Attention">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <assessedWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IgnoreDistractions"/>
+        <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Comunicate"/>
+        <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Focusing"/>
+        <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Remember"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Bomb"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Jackpot"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Killer"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Bomb -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Bomb">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Write"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFlexibility -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFlexibility">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Adventure"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Puzzle"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComprehendEmotions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComprehendEmotions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Comunicate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Comunicate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Create -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Create">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Destroy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Destroy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Driver -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Driver">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalAudioPerception -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalAudioPerception">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalExecutiveFunctions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalExecutiveFunctions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalGeneralCogFunctions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalGeneralCogFunctions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalOrganizationCapacity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalOrganizationCapacity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalPerceptionFacialRecognition -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalPerceptionFacialRecognition">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalSpatialPerception -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#EvalSpatialPerception">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Focusing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Focusing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Hangman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Hangman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Select"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#HighLevel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#HighLevel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IdentifyVisualPatterns -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IdentifyVisualPatterns">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IgnoreDistractions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IgnoreDistractions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+        <measuredWith rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#StroopTest"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#InhibitoryControl -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#InhibitoryControl">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Bomb"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Roulette"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Jackpot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Jackpot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Match"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Randomize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Karaoke -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Karaoke">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Match"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Vocalize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Killer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Killer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Match"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Shoot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Language -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Language">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+        <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Comunicate"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Hangman"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Karaoke"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#LowLevel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#LowLevel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Manage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Manage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Match -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Match">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#MeasureIntelligence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#MeasureIntelligence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#MeasurePersonality -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#MeasurePersonality">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#MediumLevel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#MediumLevel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Level"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Memory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Memory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Remember"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mine"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Solitary"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Transform"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Move -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Move">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Perception -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Perception">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#BasicCognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComprehendEmotions"/>
+        <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ProcessVisualInfo"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Driver"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Wave"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Praxia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Praxia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Karaoke"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ProcessVisualInfo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ProcessVisualInfo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Puzzle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Puzzle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Match"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Select"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Quiz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Quiz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Shoot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Randomize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Randomize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Remember -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Remember">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Capability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RetainRetrieveInfo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#RetainRetrieveInfo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Roulette -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Roulette">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Randomize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Select -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Select">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Shoot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Shoot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Solitary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Solitary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Match"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Move"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#StroopTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#StroopTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveTest"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#IndividualTest"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WrittenTest"/>
+        <abbreviation>Test de Stroop</abbreviation>
+        <applicationType>INDIVIDUAL</applicationType>
+        <author>John Ridley Stroop</author>
+        <cognitiveTestDescription>Evalúa la capacidad de una persona para controlar la interferencia cognitiva, específicamente la capacidad de ignorar distracciones irrelevantes y mantener el enfoque en la información relevante.</cognitiveTestDescription>
+        <testType>WRITTEN</testType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Transform -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Transform">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#UnderstandMotorVisualSkills -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#UnderstandMotorVisualSkills">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#PsychologicalTask"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Vocalize -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Vocalize">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Wave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Wave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplementaryActivity"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Avoid"/>
+        <comprises rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Vocalize"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WorkingMemory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#WorkingMemory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#CognitiveFunction"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComplexCognitiveFunction"/>
+        <generates rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#ComprehendEmotions"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Hangman"/>
+        <trainedThrough rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Quiz"/>
+        <isBasicFunction rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isBasicFunction>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Write -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Write">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alejo/ontologies/2024/1/modelo_cogaf#Mechanic"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

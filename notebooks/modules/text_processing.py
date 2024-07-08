@@ -4,8 +4,8 @@ import glob
 from unidecode import unidecode
 import pandas as pd
 import spacy
-from spacy.language import Language
 from spacy.matcher import Matcher
+from modules.match_patterns import EVENT_PATTERNS
 
 nlp = spacy.load("es_core_news_sm")
 
@@ -82,25 +82,10 @@ def to_array(X):
     return X.toarray()
 
 
-
-
 def get_event(text: str, verbose: bool = False) -> str:
     matcher = Matcher(nlp.vocab)
 
-    section_title = [{"IS_PUNCT": True},
-                        {"LOWER": {"FUZZY": "qué"}},
-                        {"LOWER": {"FUZZY": "pasó"}},
-                        {"IS_PUNCT": True}]
-
-    pattern = [
-        [
-            *section_title,
-            {"OP": r"{1,}"}, {"TEXT": "."},
-            {"LOWER": {"REGEX": {"IN": ["consecuencias*"]}}}
-        ]
-    ]
-
-    matcher.add("Event", pattern)
+    matcher.add("Event", EVENT_PATTERNS)
 
     doc = nlp(text)
 
@@ -116,5 +101,8 @@ def get_event(text: str, verbose: bool = False) -> str:
             print(span.text)
             print("-----------------------------------")
 
-    start, end = matches[0][1:]
+    try:
+        start, end = matches[0][1:]
+    except IndexError:
+        return "Could not find event"
     return doc[start:end-1].text
