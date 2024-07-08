@@ -1,5 +1,7 @@
 import torch
 from torch import nn, Tensor
+import joblib
+from pathlib import Path
 
 
 COGN_FUNC = ["Attention",
@@ -59,3 +61,20 @@ def train(model: nn.Module,
         test_loss = test_step(model, X_test, y_test, loss_fn)
         # print(
         #     f"Epoch: {epoch} | Train Loss: {train_loss:.5f} | Test loss: {test_loss:.5f}")
+
+
+def save_model(model, name):
+
+    # Create models directory (if it doesn't already exist), see: https://docs.python.org/3/library/pathlib.html#pathlib.Path.mkdir
+    MODEL_PATH = Path("models")
+    MODEL_PATH.mkdir(parents=True, # create parent directories if needed
+                    exist_ok=True # if models directory already exists, don't error
+    )
+
+    # Create model save path
+    MODEL_SAVE_PATH = MODEL_PATH / name
+
+    # Save the model state dict
+    print(f"Saving model to: {MODEL_SAVE_PATH}")
+    torch.save(obj=model.state_dict(), # only saving the state_dict() only saves the learned parameters
+            f=MODEL_SAVE_PATH)
