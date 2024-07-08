@@ -81,7 +81,6 @@ class ConvModel(nn.Module):
         length = out_shape_calc(in_shape=length,
                                 kernel_size=2, stride=1, padding=1)
         length = out_shape_calc(in_shape=length, kernel_size=2, stride=2)
-        print(length)
         self.classifier = nn.Sequential(
             nn.Flatten(),
             nn.Linear(in_features=hidden_units*length,
