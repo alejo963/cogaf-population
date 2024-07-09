@@ -5,7 +5,7 @@ from unidecode import unidecode
 import pandas as pd
 import spacy
 from spacy.matcher import Matcher
-from modules.match_patterns import EVENT_PATTERNS
+from modules.match_patterns import EVENT_PATTERNS, CAPABILITY_PATTERNS, CAPABILITY_VERBS, CAPABILITY_NOUNS
 
 nlp = spacy.load("es_core_news_sm")
 
@@ -106,3 +106,33 @@ def get_event(text: str, verbose: bool = False) -> str:
     except IndexError:
         return "Could not find event"
     return doc[start:end-1].text
+
+
+def get_capabilities(text: str, verbose: bool = False) -> str:
+    matcher = Matcher(nlp.vocab)
+
+    matcher.add("Capability", CAPABILITY_PATTERNS)
+
+    doc = nlp(text)
+
+    matches = matcher(doc)
+
+    capabilites = []
+    temp = {verb: noun for verb, noun in zip(
+        CAPABILITY_VERBS, CAPABILITY_NOUNS)}
+    for match_id, start, end in matches:
+        # Get string representation
+        string_id = nlp.vocab.strings[match_id]
+        span = doc[start:end]  # The matched span
+        if span[0].lemma_ in CAPABILITY_VERBS:
+            capabilites.append(temp[span[0].lemma_])
+        else:
+            capabilites.append(span[0].lemma_)
+        if verbose:
+            print("String id", string_id)
+            print(f"Start: {start} - End: {end}")
+            print("Text:")
+            print(span.text)
+            print("-----------------------------------")
+
+    return list(set(capabilites))
