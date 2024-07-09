@@ -1,5 +1,6 @@
 import torch
 from torch import nn, Tensor
+from torch.optim.lr_scheduler import LinearLR
 from pathlib import Path
 from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score
 from sklearn.exceptions import UndefinedMetricWarning
@@ -9,17 +10,17 @@ warnings.filterwarnings("ignore", category=UndefinedMetricWarning)
 
 
 COGN_FUNC = ["Attention",
-             "Memory",
-             "Percpetion",
+             "WorkingMemory",
+             "Perception",
              "CognitiveFlexibility",
              "InhibitoryControl",
              "Language",
              "Praxia",
-             "WorkingMemory",
+             "Memory",
              ]
 
 
-def train_step(model: nn.Module, X_train: Tensor, y_train: Tensor, loss_fn: nn.Module, optimizer):
+def train_step(model: nn.Module, X_train: Tensor, y_train: Tensor, loss_fn: nn.Module, optimizer, scheduler):
 
     model.train()
 
@@ -32,6 +33,8 @@ def train_step(model: nn.Module, X_train: Tensor, y_train: Tensor, loss_fn: nn.M
     loss.backward()
 
     optimizer.step()
+
+    scheduler.step()
 
     return loss
 
@@ -61,12 +64,13 @@ def train(model: nn.Module,
           verbose: bool = False):
 
     optimizer = optimizer_class(model.parameters(), lr)
+    scheduler = LinearLR(optimizer, start_factor=1.0, end_factor=0.5, total_iters=30)
 
     model.to(device)
     X_train, X_test = X_train.to(device), X_test.to(device)
     y_train, y_test = y_train.to(device), y_test.to(device)
     for epoch in range(epochs):
-        train_loss = train_step(model, X_train, y_train, loss_fn, optimizer)
+        train_loss = train_step(model, X_train, y_train, loss_fn, optimizer, scheduler)
         if verbose:
             if epoch % 100 == 0:
                 print(f"Epoch: {epoch}")
